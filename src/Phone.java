@@ -1,20 +1,18 @@
-import java.io.IOException;
-
 public class Phone {
-    public String model;
-    public static String callerName;
+    public  String model;
+    private static String callerName;
     private static int phoneNumber;
-    public static int age;
-    public static double weight;
+    public int age;
+    public double weight;
     private static boolean hasSimCard;
 
     public Phone(String model, int age, double weight, boolean hasSimCard, String callerName, int phoneNumber) {
         this.model = model;
         this.age = age;
         this.weight = weight;
-        this.hasSimCard = hasSimCard;
-        this.callerName = callerName;
-        this.phoneNumber = phoneNumber;
+        Phone.hasSimCard = hasSimCard;
+        Phone.callerName = callerName;
+        Phone.phoneNumber = phoneNumber;
     }
 
     public boolean getSimCard() {
@@ -22,8 +20,8 @@ public class Phone {
     }
 
     public void setHasSimCard(boolean hasSimCard) {
-        if (hasSimCard == true) {
-            this.hasSimCard = hasSimCard;
+        if (hasSimCard) {
+            Phone.hasSimCard = hasSimCard;
             System.out.println("Sim card found");
         } else {
             System.out.println("Sim Card has ejected");
@@ -38,7 +36,7 @@ public class Phone {
         if (callerName == "") {
             System.out.println("Caller name is not found");
         } else {
-            this.callerName = callerName;
+            Phone.callerName = callerName;
         }
     }
 
@@ -46,9 +44,9 @@ public class Phone {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) throws Exception {
+    public void setPhoneNumber(int phoneNumber) {
         if (phoneNumber > 0 | phoneNumber < 0 | phoneNumber == 0) {
-            this.phoneNumber = phoneNumber;
+            Phone.phoneNumber = phoneNumber;
         } else {
             System.out.println("SPAM");
         }
