@@ -38,7 +38,7 @@ public class Main {
         phone.weight = 600;
 
         phone.setCallerName("Alice");
-        phone.setPhoneNumber(252769);
+        phone.setPhoneNumber(123051);
 
         System.out.println("Phone model: " + phone.model);
         System.out.println("Phone age: " + phone.age);

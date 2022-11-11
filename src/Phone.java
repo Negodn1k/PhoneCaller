@@ -45,9 +45,9 @@ public class Phone {
     }
 
     public void setPhoneNumber(int phoneNumber) {
-        if (phoneNumber > 0 | phoneNumber < 0 | phoneNumber == 0) {
+        try {
             Phone.phoneNumber = phoneNumber;
-        } else {
+        } catch (TypeNotPresentException e) {
             System.out.println("SPAM");
         }
     }
